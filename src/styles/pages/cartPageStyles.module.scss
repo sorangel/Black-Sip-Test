@@ -1,0 +1,46 @@
+@mixin totals {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  .label,
+  .amount {
+    font-weight: bold;
+    font-size: 1em;
+  }
+}
+
+.totals {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .spacer {
+    flex: 1 0;
+  }
+
+  .subTotal {
+    @include totals;
+    background: rgba(229, 229, 229, 1);
+  }
+
+  .sent {
+    @include totals;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+  }
+}
+
+.bottomMargin {
+  width: 100%;
+  height: 150px;
+}

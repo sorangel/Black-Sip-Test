@@ -1,0 +1,65 @@
+.container {
+  height: 100px;
+  max-width: 350px;
+  display: grid;
+  grid-template-columns: 50px 1fr 75px;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+  border: 1px solid rgba(236, 237, 237, 1);
+  margin: 5px;
+  padding: 10px;
+
+  &:hover {
+    transition: all linear 120ms;
+    background: rgba(236, 237, 237, 0.2);
+  }
+
+  .imageContainer {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .contentContainer {
+    padding: 10px 0 0 0;
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    .title {
+      font-weight: 400;
+      font-size: 0.8em;
+    }
+  }
+
+  .actionsContainer {
+    padding: 10px 0 0 0;
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .price {
+      width: 100%;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
